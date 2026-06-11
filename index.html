@@ -1,16 +1,236 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
+
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Vibhaverse</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:
+linear-gradient(
+180deg,
+#040816 0%,
+#09142d 50%,
+#111f45 100%
+);
+
+overflow-x:hidden;
+font-family:'Poppins',sans-serif;
+color:white;
+
+}
+
+.hero{
+
+height:100vh;
+
+display:flex;
+flex-direction:column;
+
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+position:relative;
+
+}
+
+h1{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:clamp(4rem,10vw,8rem);
+
+color:#f7e7a9;
+
+text-shadow:
+0 0 20px rgba(247,231,169,0.5);
+
+margin-bottom:20px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+font-size:1.2rem;
+
+line-height:1.8;
+
+opacity:0.9;
+
+margin-bottom:40px;
+
+}
+
+.enter-btn{
+
+padding:18px 40px;
+
+border:none;
+
+border-radius:999px;
+
+background:#f7e7a9;
+
+color:#111;
+
+font-size:1rem;
+
+cursor:pointer;
+
+transition:0.3s;
+
+font-weight:600;
+
+}
+
+.enter-btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+0 0 30px rgba(247,231,169,0.5);
+
+}
+
+.star{
+
+position:absolute;
+
+background:white;
+
+border-radius:50%;
+
+animation:twinkle 3s infinite;
+
+}
+
+@keyframes twinkle{
+
+0%,100%{
+opacity:0.2;
+}
+
+50%{
+opacity:1;
+}
+
+}
+
+.butterfly{
+
+position:absolute;
+
+font-size:20px;
+
+animation:float 12s linear infinite;
+
+opacity:0.7;
+
+}
+
+@keyframes float{
+
+from{
+transform:translateX(-100px);
+}
+
+to{
+transform:translateX(calc(100vw + 100px));
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-<h1>Vibhaverse ✨</h1>
+<div class="hero">
 
-<p>
-Work in progress...
+<h1>VIBHAVERSE 🦋✨</h1>
+
+<p class="subtitle">
+
+A universe built from butterflies,
+startup dreams,
+sushi,
+dancing,
+hugs,
+and one very important human.
+
 </p>
 
+<button class="enter-btn">
+
+Enter The Vibhaverse
+
+</button>
+
+</div>
+
+<script>
+
+for(let i=0;i<80;i++){
+
+const star=document.createElement('div');
+
+star.classList.add('star');
+
+star.style.width=Math.random()*3+'px';
+star.style.height=star.style.width;
+
+star.style.top=Math.random()*100+'%';
+star.style.left=Math.random()*100+'%';
+
+star.style.animationDelay=
+Math.random()*3+'s';
+
+document.body.appendChild(star);
+
+}
+
+for(let i=0;i<8;i++){
+
+const butterfly=document.createElement('div');
+
+butterfly.classList.add('butterfly');
+
+butterfly.innerHTML='🦋';
+
+butterfly.style.top=
+Math.random()*100+'%';
+
+butterfly.style.animationDelay=
+Math.random()*10+'s';
+
+document.body.appendChild(butterfly);
+
+}
+
+</script>
+
 </body>
+
 </html>

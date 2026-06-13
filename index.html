@@ -1,18 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Vibhaverse</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(
+180deg,
+#020612 0%,
+#07132e 40%,
+#0d2255 100%
+);
+color:white;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+position:relative;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(4rem,10vw,8rem);
+color:#f7e7a9;
+text-shadow:
+0 0 10px rgba(247,231,169,.6),
+0 0 25px rgba(247,231,169,.5),
+0 0 50px rgba(247,231,169,.3);
+}
+
+.pretitle{
+letter-spacing:4px;
+text-transform:uppercase;
+margin-bottom:20px;
+opacity:.8;
+font-size:.8rem;
+}
+
+.subtitle{
+max-width:850px;
+margin-top:25px;
+line-height:1.8;
+font-size:1.3rem;
+}
+
+.enter-btn{
+margin-top:40px;
+padding:18px 45px;
+border:none;
+border-radius:999px;
+background:#f7e7a9;
+font-size:1rem;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.enter-btn:hover{
+transform:translateY(-5px);
+}
+
+.story{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:80px 20px;
+}
+
+.story-content{
+max-width:900px;
+}
+
+.story h2{
+font-family:'Cormorant Garamond',serif;
+font-size:4rem;
+color:#f7e7a9;
+margin-bottom:40px;
+}
+
+.story p{
+font-size:1.35rem;
+line-height:2.2;
+}
+
+.star{
+position:fixed;
+background:white;
+border-radius:50%;
+opacity:.7;
+}
+
+</style>
+
 </head>
 
 <body>
 
-<h1>Vibhaverse 🦋✨</h1>
+<section class="hero">
+
+<p class="pretitle">
+Welcome To The Vibhaverse
+</p>
+
+<h1>VIBHAVERSE 🦋✨</h1>
+
+<p class="subtitle">
+A universe built from butterflies,
+startup dreams,
+sushi,
+dancing,
+hugs,
+and one very important human.
+</p>
+
+<button class="enter-btn"
+onclick="document.getElementById('before').scrollIntoView()">
+
+Enter The Vibhaverse ✨
+
+</button>
+
+</section>
+
+<section id="before" class="story">
+
+<div class="story-content">
+
+<h2>Before Vibha ✨</h2>
 
 <p>
-A universe built from butterflies, startup dreams,
-sushi, dancing, hugs and one very important human.
+
+Before Vibha,
+
+<br><br>
+
+there were classes.
+
+<br><br>
+
+there were assignments.
+
+<br><br>
+
+there were projects.
+
+<br><br>
+
+there were birthdays.
+
+<br><br>
+
+there were ordinary days.
+
+<br><br>
+
+Then Section Delta happened.
+
 </p>
+
+</div>
+
+</section>
+
+<script>
+
+for(let i=0;i<150;i++){
+
+const star=document.createElement('div');
+
+star.classList.add('star');
+
+const size=Math.random()*3;
+
+star.style.width=size+'px';
+star.style.height=size+'px';
+
+star.style.top=Math.random()*100+'%';
+star.style.left=Math.random()*100+'%';
+
+document.body.appendChild(star);
+
+}
+
+</script>
 
 </body>
 
